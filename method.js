@@ -7,7 +7,7 @@ var numArr = []
 function submit(){
     var daySo = domID('daySo').value*1
     numArr.push(daySo)
-    domID('output').innerHTML = numArr
+    domID('output').innerHTML = `Dãy số: ${numArr}`
 }
 // Bài 1
 function tinhTongLogic(){
