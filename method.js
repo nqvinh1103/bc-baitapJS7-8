@@ -22,7 +22,7 @@ function tinhTongLogic(){
 // Bài 2
 function demSoDuongLogic(){
     var count=0
-    for (var i=0; i<=numArr.length;i++){
+    for (var i=0; i<numArr.length;i++){
         if(numArr[i]>0){
             count++
         }
@@ -97,7 +97,7 @@ function timSoNguyenToLogic(){
 // Bài 9
 function demSoNguyenLogic(){
     var count =0
-    for(var i=0;i<=numArr.length;i++){
+    for(var i=0;i<numArr.length;i++){
         if(Number.isInteger(numArr[i])){
             count++
         }
@@ -107,7 +107,7 @@ function demSoNguyenLogic(){
 // Bài 10
 function demSoDuongLogic(){
     var soDuong = 0
-    for(var i=0;i<=numArr.length;i++){
+    for(var i=0;i<numArr.length;i++){
         if(numArr[i]>0){
             soDuong++
         }
@@ -116,7 +116,7 @@ function demSoDuongLogic(){
 }
 function demSoAmLogic(){
     var soAm = 0
-    for(var i=0;i<=numArr.length;i++){
+    for(var i=0;i<numArr.length;i++){
         if(numArr[i]<0){
             soAm++
         }
