@@ -79,7 +79,7 @@ function kiemTraSoNguyenTo(num){
     if(num<2){
         return false;
     }
-    for(var i=2;i<=Math.sqrt(num);i++){
+    for(var i=2;i<(num-1);i++){
         if(num%i==0){
             return false
         }
@@ -87,7 +87,6 @@ function kiemTraSoNguyenTo(num){
     return true
 }
 function timSoNguyenToLogic(){
-    var a
     for (var i=0; i<=numArr.length;i++){
         if(kiemTraSoNguyenTo(numArr[i])){
             return numArr[i]
@@ -95,10 +94,18 @@ function timSoNguyenToLogic(){
     }
 }
 // Bài 9
+var newArr = []
+function nhapMangMoi(){
+    var soMoi = domID('newArr').value*1
+    newArr.push(soMoi)
+    var mergeArr = numArr.concat(newArr)
+    domID('output2').innerHTML = `Dãy số mới: ${mergeArr}`
+}
 function demSoNguyenLogic(){
     var count =0
-    for(var i=0;i<numArr.length;i++){
-        if(Number.isInteger(numArr[i])){
+    var mergeArr = numArr.concat(newArr)
+    for(var i=0;i<mergeArr.length;i++){
+        if(Number.isInteger(mergeArr[i])){
             count++
         }
     }
@@ -130,8 +137,11 @@ function soSanhDuongAmLogic(){
     if(a>b){
         ketQua = 'Số dương > Số âm'
     }
-    else{
+    else if(a<b){
         ketQua = 'Số âm > Số dương'
+    }
+    else{
+        ketQua = 'Số âm = Số dương'
     }
     return ketQua
 }
