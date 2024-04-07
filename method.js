@@ -41,9 +41,9 @@ function timSoNhoNhatLogic(){
 }
 // Bài 4
 function timSoDuongNhoNhatLogic(){
-    var min = numArr[0]
+    var min = Infinity
     for(var i=0;i<numArr.length;i++){
-        if(numArr[i]>0 && numArr[i]<min && min>0){
+        if(numArr[i]>0 && numArr[i]<min){
             min = numArr[i]
         }
     }
